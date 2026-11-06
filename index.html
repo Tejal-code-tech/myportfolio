@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tejal Shirsath – AI/ML and Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050816;--panel:#0b1022;--line:#1c2442;--ink:#eef1ff;--muted:#9aa4c7;--a:#6366f1;--a2:#22d3ee;color-scheme:dark;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif}
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+#root{position:relative;z-index:1}
+:focus-visible{outline:3px solid var(--a2);outline-offset:2px}
+nav{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:10;display:flex;align-items:center;gap:36px;padding:10px 26px;background:rgba(11,16,34,.88);border:1px solid var(--line);border-radius:999px;backdrop-filter:blur(8px);max-width:calc(100% - 20px)}
+nav b{font-size:26px;font-weight:800;color:var(--a)}
+nav div{display:flex;gap:22px;overflow-x:auto}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:16px}nav a:hover{color:var(--a2)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-top:110px}
+.hero h1{font-size:clamp(40px,6.5vw,70px);font-weight:800;line-height:1.05;margin:0 0 8px}
+.grad{background:linear-gradient(90deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h2{font-size:clamp(20px,3vw,28px);font-weight:600;margin:0 0 18px;color:var(--a2)}
+.hero p{color:var(--muted);max-width:56ch;margin:0 0 28px;text-align:justify;hyphens:auto}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 24px;border-radius:10px;font-weight:600;text-decoration:none;color:var(--ink);border:1px solid var(--a)}
+.btn.fill{background:var(--a)}button.btn{background:none;font:inherit;font-weight:600;cursor:pointer}.btn:hover{box-shadow:0 0 22px rgba(99,102,241,.55)}
+.photo{justify-self:center;width:min(340px,80vw);aspect-ratio:1;border-radius:50%;padding:5px;background:linear-gradient(135deg,var(--a),var(--a2));box-shadow:0 0 60px rgba(99,102,241,.4)}
+.photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+section{padding:90px 0}
+h2.t{text-align:center;font-size:clamp(30px,4vw,42px);font-weight:800;color:var(--a);margin:0 0 44px}
+.about{max-width:760px;margin:0 auto;text-align:center;color:var(--muted)}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:34px;text-align:left}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.box b{display:block;color:var(--ink)}.box span{color:var(--muted);font-size:15px;display:block}
+.tl{list-style:none;margin:0 auto;padding:0 0 0 24px;border-left:2px solid var(--a);max-width:780px}
+.tl li{position:relative;margin-bottom:28px}
+.tl li:before{content:"";position:absolute;left:-32px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--a2)}
+.tl h3{margin:0;font-size:21px}.tl em{font-style:normal;color:var(--a2);font-size:15px}
+.tl ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tile{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;height:92px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-weight:600;transition:box-shadow .2s,border-color .2s,transform .2s}
+.tile:hover{border-color:#8b8dff;box-shadow:0 0 26px rgba(99,102,241,.55);transform:scale(1.03)}
+.tile i{font-style:normal;font-size:24px}.tile s{position:absolute;right:26px;bottom:6px;color:#facc15;text-decoration:none;font-size:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px}
+.card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:26px;transition:border-color .2s}
+.card:hover{border-color:var(--a2)}
+.thumb{height:170px;border-radius:12px;margin-bottom:22px;display:flex;align-items:center;justify-content:center;font-size:58px}
+.card h3{margin:0 0 10px;font-size:22px}
+.card p{color:var(--muted);margin:0 0 18px;font-size:16px;flex:1}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pills span{font-size:14px;font-weight:500;color:var(--a2);background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.3);border-radius:999px;padding:3px 14px}
+.contact{text-align:center}
+.contact a.big{font-size:clamp(20px,4vw,34px);font-weight:800;word-break:break-all}
+.contact p{color:var(--muted)}
+footer{text-align:center;padding:30px 0 50px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+@media (max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr;text-align:center;padding-top:120px}.hero p{margin-inline:auto}.btns{justify-content:center}.photo{order:-1;width:min(240px,60vw)}nav{gap:14px;padding:8px 16px}nav b{font-size:20px}nav a{font-size:14px}}
+@media (max-width:480px){.grid4{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+const h=React.createElement;
+const PHOTO="photo.jpg";
+const EMAIL="tejalshirsath18@gmail.com",PHONE="+91 9579079301";
+const LINKS={github:"https://github.com/Tejal-code-tech",linkedin:"https://www.linkedin.com/in/tejal-shirsath-46a951313"}; // add your profile URLs here
+
+(function(){const c=document.getElementById("stars"),x=c.getContext("2d");
+ function draw(){c.width=innerWidth;c.height=innerHeight;x.fillStyle="#fff";
+  for(let i=0;i<110;i++){x.globalAlpha=Math.random()*.7+.15;x.beginPath();x.arc(Math.random()*c.width,Math.random()*c.height,Math.random()*1.3+.3,0,7);x.fill()}}
+ draw();addEventListener("resize",draw)})();
+
+const SKILLS=[["🐍","Python"],["☕","Java"],["🗄️","SQL"],["🟨","JavaScript"],["⚛️","React.js"],["🧪","Flask"],["🔌","REST APIs"],["🐘","PHP"],["🐬","MySQL"],["🎨","HTML, CSS, Bootstrap"],["📊","scikit-learn"],["🔢","NumPy, Pandas"],["👁️","OpenCV"],["🚗","YOLOv8, ResNet-50"],["🧠","LLMs and RAG",1],["🔀","Git and GitHub"]];
+const PROJECTS=[
+ {n:"TruthLens AI",e:"🔍",g:"135deg,#312e81,#0e7490",d:"Evidence-based claim verification assistant. Retrieves evidence from trusted sources, compares supporting and contradicting evidence with RAG, cites sources and flags uncertainty.",k:["Python","LLMs","RAG","Sentence Transformers","Streamlit"]},
+ {n:"Vehicle Damage Analysis",e:"🚗",g:"135deg,#1e1b4b,#7c2d12",d:"Finds damaged areas in vehicle images, classifies severity as minor, moderate or severe, and estimates repair cost to speed up insurance assessment.",k:["YOLOv8","ResNet-50","XGBoost","OpenCV","Flask"]},
+ {n:"AI Fitness Tracker",e:"💪",g:"135deg,#064e3b,#1e3a8a",d:"Tracks workouts, steps, calories and distance, applies machine learning for personalised insights, and shows activity trends on a dashboard.",k:["Python","Flask","SQL","Machine Learning"]},
+ {n:"Buyer’s Edge",e:"🛒",g:"135deg,#4c1d95,#9d174d",d:"Local shopping web app that helps customers discover products from nearby vendors, with search, user authentication and a cart.",k:["HTML","CSS","Bootstrap","JavaScript","PHP","MySQL"]}
+];
+const nav=[["Home","home"],["About","about"],["Experience","experience"],["Skills","skills"],["Projects","projects"],["Contact","contact"]];
+const T=(id,t,c)=>h("section",{id,className:"wrap"},h("h2",{className:"t"},t),c);
+
+function copyEmail(e){const b=e.currentTarget,done=()=>{b.textContent="Copied ✓";setTimeout(()=>{b.textContent="Copy email"},2000)};
+ try{navigator.clipboard.writeText(EMAIL).then(done,()=>{throw 0})}catch(_){const t=document.createElement("textarea");t.value=EMAIL;document.body.appendChild(t);t.select();try{document.execCommand("copy");done()}catch(__){b.textContent=EMAIL}document.body.removeChild(t)}}
+function App(){
+ const ext=(u,t)=>u?h("a",{className:"btn",href:u,target:"_blank",rel:"noopener"},t):null;
+ return h(React.Fragment,null,
+  h("nav",null,h("b",null,"TS"),h("div",null,nav.map(n=>h("a",{key:n[1],href:"#"+n[1]},n[0])))),
+  h("main",null,
+   h("header",{id:"home",className:"wrap hero"},
+    h("div",null,
+     h("h1",null,"Hi, I’m ",h("span",{className:"grad"},"Tejal Shirsath")),
+     h("h2",null,"AI/ML and Full-Stack Developer"),
+     //h("p",null,"I’m an Information Technology graduate from Nashik. I build machine learning projects, LLM applications and full-stack web apps, with a focus on AI that shows its evidence and says when it is unsure."),
+     h("div",{className:"btns"},h("a",{className:"btn fill",href:"#projects"},"View projects"),h("a",{className:"btn",href:"#contact"},"Contact me"),ext(LINKS.github,"GitHub"),ext(LINKS.linkedin,"LinkedIn"))),
+    h("div",{className:"photo"},h("img",{src:PHOTO,alt:"Portrait of Tejal Shirsath"}))),
+   T("about","About",h("div",null,
+    h("p",{className:"about"},"I’m a B.E. graduate in Information Technology who enjoys turning data and language models into tools people can trust. I’ve built computer vision, machine learning and web projects."),
+    h("div",{className:"edu"},
+     h("div",{className:"box"},h("b",null,"B.E. in Information Technology"),h("span",null,"MET Institute of Engineering, Nashik"),h("span",null,"2023–2026 · CGPA 8.48")),
+     h("div",{className:"box"},h("b",null,"Diploma in Computer Technology"),h("span",null,"K. K. Wagh Polytechnic, Nashik"),h("span",null,"2020–2023 · 82.35%")),
+     h("div",{className:"box"},h("b",null,"Certifications"),h("span",null,"AI with Machine Learning in Java, Oracle"),h("span",null,"Claude with the Anthropic API"))))),
+   T("experience","Experience",h("ul",{className:"tl"},
+    h("li",null,h("h3",null,"AI Developer (project based)"),h("em",null,"Tech Saksham – AI Transformative Learning · Feb–Mar 2025"),
+     h("ul",null,h("li",null,"Built a fitness tracker in Python, Flask and SQL covering workouts, steps, calories and distance."),h("li",null,"Added machine learning insights and a dashboard of activity trends."))),
+    h("li",null,h("h3",null,"Web Development Intern"),h("em",null,"SachiTech Technology, Nashik · Jan–Feb 2025"),
+     h("ul",null,h("li",null,"Built a responsive real estate website with HTML, CSS, JavaScript, PHP and MySQL."),h("li",null,"Implemented authentication, property listings, image galleries and inquiry forms."))))),
+   T("skills","Skills",h("div",{className:"grid4"},SKILLS.map(s=>h("div",{key:s[1],className:"tile"},h("i",null,s[0]),s[1],s[2]?h("s",{"aria-label":"Featured"},"★"):null)))),
+   T("projects","Projects",h("div",{className:"cards"},PROJECTS.map(p=>h("article",{key:p.n,className:"card"},
+    h("div",{className:"thumb",style:{background:"linear-gradient("+p.g+")"},"aria-hidden":"true"},p.e),
+    h("h3",null,p.n),h("p",null,p.d),h("div",{className:"pills"},p.k.map(k=>h("span",{key:k},k))))))),
+   T("contact","Contact",h("div",{className:"contact"},
+  
+    h("p",null,h("a",{className:"big grad",href:"mailto:"+EMAIL},EMAIL)),h("div",{className:"btns",style:{justifyContent:"center",margin:"18px 0"}},h("a",{className:"btn fill",href:"https://mail.google.com/mail/?view=cm&fs=1&to="+EMAIL,target:"_blank",rel:"noopener"},"Write in Gmail"),h("button",{className:"btn",onClick:copyEmail},"Copy email")),h("p",null,PHONE)))),
+  h("footer",null,"© 2026 Tejal Shirsath"));
+}
+ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+</script>
+</body>
+</html>
